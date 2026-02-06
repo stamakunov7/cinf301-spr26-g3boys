@@ -1,0 +1,7 @@
+body { font-family: system-ui, Arial, sans-serif; margin: 0; }
+header, nav, main, footer, section, article, aside { padding: 16px; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 12px; }
+nav a { text-decoration: none; }
+main { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+section, aside { border: 1px solid #ddd; border-radius: 10px; }
+footer { text-align: center; }
