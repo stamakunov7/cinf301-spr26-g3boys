@@ -4,30 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team Project – Second Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="header">
-    <h1 class="header-title">Team Project</h1>
-    <p class="header-subtitle">Div-only layout (second page).</p>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- header as div -->
+  <div class="site-header">
+    <h1><i class="fa-solid fa-futbol" aria-hidden="true"></i> Team Project</h1>
+    <p class="subtitle">Div-only recreation of the first page</p>
+    <img src="https://picsum.photos/400/200" alt="Football stadium" width="400" height="200">
   </div>
 
-  <div class="nav" aria-label="Primary">
-    <div class="nav-list">
-      <a class="nav-link" href="../first-page/index.html">Home</a>
-      <a class="nav-link" href="index.html">Second Page</a>
-      <a class="nav-link" href="#teams">Teams</a>
+  <!-- nav as div -->
+  <div class="site-nav" aria-label="Primary">
+    <div class="nav-links">
+      <a href="../first-page/index.html">Home</a>
+      <a href="index.html">Second Page</a>
+      <a href="#teams">Teams</a>
     </div>
-  </div>  
+  </div>
 
+  <!-- main grid using divs only -->
   <div id="main" class="main">
-    <div id="teams" class="section">
-      <h2 class="section-title">Teams</h2>
-      <p>Content placeholder.</p>
+    <div class="content">
+      <div class="section intro">
+        <h2>Overview</h2>
+
+        <div class="article">
+          <h3>Article Title</h3>
+          <p>This is placeholder content for the second page, recreated using only divs for layout elements.</p>
+        </div>
+
+        <div class="article">
+          <h3>Another Article</h3>
+          <p>More placeholder content.</p>
+        </div>
+      </div>
+
+      <!-- teams section recreated without <table> -->
+      <div id="teams" class="section teams-section">
+        <h2 id="teams-title"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Football Teams</h2>
+        <img src="https://picsum.photos/400/201" alt="Football teams" width="400" height="200">
+
+        <div class="card">
+          <h3 class="card-title">Featured Clubs</h3>
+          <p class="muted">A quick snapshot of teams, leagues, and recent form (placeholder data).</p>
+
+          <!-- div-based table: header row + body rows -->
+          <div class="teams-table">
+            <div class="teams-row teams-header">
+              <div class="teams-cell head">Club</div>
+              <div class="teams-cell head">League</div>
+              <div class="teams-cell head">City</div>
+              <div class="teams-cell head">Stadium</div>
+            </div>
+
+            <div class="teams-row">
+              <div class="teams-cell">Manchester City</div>
+              <div class="teams-cell">Premier League</div>
+              <div class="teams-cell">Manchester</div>
+              <div class="teams-cell">Etihad Stadium</div>
+            </div>
+
+            <div class="teams-row">
+              <div class="teams-cell">Real Madrid</div>
+              <div class="teams-cell">La Liga</div>
+              <div class="teams-cell">Madrid</div>
+              <div class="teams-cell">Santiago Bernabéu</div>
+            </div>
+
+            <div class="teams-row">
+              <div class="teams-cell">FC Barcelona</div>
+              <div class="teams-cell">La Liga</div>
+              <div class="teams-cell">Barcelona</div>
+              <div class="teams-cell">Spotify Camp Nou</div>
+            </div>
+
+            <div class="teams-row">
+              <div class="teams-cell">Bayern Munich</div>
+              <div class="teams-cell">Bundesliga</div>
+              <div class="teams-cell">Munich</div>
+              <div class="teams-cell">Allianz Arena</div>
+            </div>
+
+            <div class="teams-row">
+              <div class="teams-cell">Inter Milan</div>
+              <div class="teams-cell">Serie A</div>
+              <div class="teams-cell">Milan</div>
+              <div class="teams-cell">San Siro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sidebar recreated as div -->
+    <div class="sidebar">
+      <div class="section">
+        <h2>Sidebar</h2>
+        <p>Extra info, links, or highlights go here.</p>
+      </div>
     </div>
   </div>
 
-  <div class="footer">
+  <!-- footer as div -->
+  <div class="site-footer">
     <p>&copy; 2026 Temirlan, Mohammed, Michael</p>
   </div>
 </body>
