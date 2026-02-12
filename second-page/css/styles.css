@@ -121,9 +121,38 @@ body {
 	margin-top: 20px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 800px) {
-	.main { grid-template-columns: 1fr; }
-	.teams-row { grid-template-columns: 1fr; }
+/* Responsive (PR8 - Michael): match first-page breakpoint & behavior */
+@media (max-width: 768px) {
+	.main {
+		grid-template-columns: 1fr;
+		padding: 16px;
+	}
+
+	.nav-links {
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+	}
+
+	.site-nav {
+		padding: 16px;
+	}
+
+	.teams-section .card {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.teams-table {
+		min-width: 500px;
+	}
+
+	.site-header {
+		padding: 20px 16px;
+	}
+
+	.site-header img {
+		margin-top: 10px;
+	}
 }
 
