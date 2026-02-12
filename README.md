@@ -1,59 +1,30 @@
 # CINF301 — Team Project
 
-This repository contains a small static website built as a team assignment for CINF301. It demonstrates a simple, responsive layout with two pages:
+A static website built as a team assignment for CINF301. It demonstrates responsive layout, semantic vs. div-only markup, and Git workflow (PRs, approvals).
 
-- `first-page/` — the original page using semantic HTML elements (header, nav, main, section, article, aside, footer, table).
-- `second-page/` — a recreation of the first page that uses only `<div>` elements for structure (no semantic structural tags or `<table>`). The goal is to match the visual layout while using only `div`s and CSS for structure.
+## Requirements
 
-Contents
---------
+- **first-page:** Uses semantic HTML (header, nav, main, section, article, aside, footer, table). Responsive on screens &lt; 768px.
+- **second-page:** Same content and layout using **only `<div>`** elements (no semantic tags, no `<table>`). Responsive to match first-page mobile behavior.
+- **Git rules:** No direct commits to `main`. All changes via pull requests; 2 approvals required before merge.
 
-- `first-page/`
-	- `index.html` — semantic markup and layout.
-	- `css/styles.css` — styles for the semantic page.
+## Contents
 
-- `second-page/`
-	- `index.html` — div-only markup that visually reproduces the first page.
-	- `css/styles.css` — styles adapted from the first page but targeting the div-based classes.
+| Folder     | Description |
+| ---------- | ----------- |
+| `first-page/` | Semantic markup, `index.html` + `css/styles.css`. Links to second-page. |
+| `second-page/` | Div-only recreation, same structure. Links back to first-page. |
 
-How it differs
----------------
+## How to run locally
 
-The `first-page` uses semantic HTML elements (recommended for accessibility and document structure). The `second-page` intentionally avoids those semantic tags and instead implements the same sections using only `<div>` elements styled with CSS. This is an exercise in layout and CSS selectors.
-
-Run locally
------------
-
-This is a static site — no build tools or server are required. To view the pages locally open the HTML files in your browser.
-
-From the repository root (macOS / zsh):
+No build tools needed. Open the HTML files in a browser, or use a local server:
 
 ```bash
-# open the first page in the default browser
-open first-page/index.html
-
-# open the second page (div-only version)
-open second-page/index.html
-```
-
-Alternatively, you can start a small local HTTP server (recommended when testing fonts/CORS or relative paths):
-
-```bash
-# using Python 3 (works in macOS zsh)
-cd /path/to/cinf301-spr26-g3boys
+cd cinf301-spr26-g3boys
 python3 -m http.server 8000
-
-# then open http://localhost:8000/first-page/index.html
+# Open http://localhost:8000/first-page/ or http://localhost:8000/second-page/
 ```
 
-Notes & suggestions
--------------------
+## Team
 
-- The second page reproduces the look of the first but intentionally replaces semantic tags and the HTML table with `div`-based structures using CSS Grid. This is for learning and demonstration purposes.
-- If you'd like the second page to match the first page even more closely, I can tweak spacing, typography, and responsive breakpoints.
-
-Authors
--------
-
-Temirlan, Mohammed, Michael (team members)
-
+Temirlan, Mohammed, Michael
